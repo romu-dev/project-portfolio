@@ -13,7 +13,13 @@ session_start();
     <meta name="description" content="Un Backoffice de portfolio développé à l'Acs de Dijon">
     <title>Backoffice Portfolio</title>
 </head>
-<body>
+<body><?php
+if ($_SESSION) {
+    echo $_SESSION["message"];
+    unset($_SESSION["message"]);
+}
+?>
+
     <form action="handler.php" method="post">
        
         <p>
