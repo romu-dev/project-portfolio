@@ -2,6 +2,8 @@
 
 session_start();
 
-echo "<h1>".$_POST["data-title"]."</h1>";
-echo "<br>";
-echo $_POST["data-description"];
+$title = strip_tags( $_POST["data-title"]);
+$description = strip_tags( $_POST["data-description"]);
+
+echo $title;
+echo $description;
